@@ -1,14 +1,23 @@
 module.exports = function(sequlize, DataTypes) {
-    var userName = sequelize.define("userName", {
-        userName: DataTypes.STRING
+    var User = sequelize.define("user", {
+        userName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        userAddress: {
+            type: DataTypes.TEXT,
+            allowNnull: false
+        }
     });
 
-    userName.associate = function(models) {
+    User.associate = function(models) {
 
-        userName.hasMany(models.Post, {
-            onDelete: "cascade"
+        User.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: false
+            }
         });
     };
 
-    return userName;
+    return user;
 };

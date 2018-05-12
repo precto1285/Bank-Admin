@@ -1,29 +1,20 @@
 module.exports = function(sequlize, DataTypes) {
-    var checking = sequelize.define("checking", {
-        checking: DataTypes.STRING
+    var account = sequelize.define("account", {
+        account_type: { 
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     });
 
-    checking.associate = function(models) {
+    account.associate = function(models) {
 
-        checking.hasMany(models.Post, {
-            onDelete: "cascade"
+        account.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: false
+            }
         });
     };
 
 
-    return checking;
-
-    
-    var saving = sequelize.define("saving", {
-        saving: DataTypes.STRING
-    });
-
-    saving.associate = function(models) {
-
-        saving.hasMany(models.Post, {
-            onDelete: "cascade"
-        });
-    };
-
-    return savings;
+    return account;
 };
