@@ -1,7 +1,7 @@
 {
   "name": "bank-admin",
   "version": "1.0.0",
-  "description": "",
+  "description": "You're starting a bank and you need a way to manage your clients and all the deposits and withdrawals that are going to happen. Since you're in a web development course, let's use software!",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
