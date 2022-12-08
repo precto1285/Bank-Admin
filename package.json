@@ -22,7 +22,7 @@
   "homepage": "https://github.com/precto1285/Bank-Admin#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mysql2": "^1.5.3",
     "save": "^2.3.2",
     "sequelize": "^4.37.7"
